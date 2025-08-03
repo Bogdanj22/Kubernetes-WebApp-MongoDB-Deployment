@@ -15,18 +15,21 @@ This web application is connected to the MongoDB database, so when you open the 
 ## 🚀 How to Run Locally (Minikube)
 
 ```bash
-# Start Minikube
+# Start Minikube:
 minikube start
 
-# Apply secrets and config for MongoDB
+# Apply secrets and config for MongoDB:
 kubectl apply -f mongo-secret.yaml
 kubectl apply -f mongo-config.yaml
 
-# Deploy MongoDB and WebApp
+# Deploy MongoDB and WebApp:
 kubectl apply -f mongo.yaml
 kubectl apply -f webapp.yaml
 
-# Get Minikube IP
+# To check if everything is up:
+kubectl get all 
+
+# Get Minikube IP:
 minikube ip
 # If using WSL on windows:
 minikube service webapp-service
